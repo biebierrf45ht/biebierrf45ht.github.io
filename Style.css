@@ -1,15 +1,20 @@
 html{
-  html::before 
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background: radial-gradient(circle, transparent 0%, rgba(255, 255, 255, 0.8) 70%);
-	animation: pulse 2s infinite alternate;
-}
+	  margin:0;
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+	  background-size: 600% 100%;
+	  animation: gradient 16s linear infinite;
+	  animation-direction: alternate;
+  }
+  @keyframes gradient {
+	  0%   {background-position: 0% }
+	  25% {background-position: 25%;}
+	  50%  {background-position:50% }
+	  75%{background-position:75%}
+	  100% {background-position: 100%}
+  }
 h1{
 	font-size: 60px;
 	color: blue;
@@ -96,4 +101,3 @@ form{
 html{
 	height:100%;
 }
-

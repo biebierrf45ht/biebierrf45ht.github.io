@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/ico" href="ep.ico" />
+        <link rel="stylesheet" href="Style.css" />
+		<meta charset="UTF-8">
+        <title> Presentation de l'histoire d'Epic Games.</title>
+        <style> 
+        </style> 
+    </head>
+    <body>
+        <div>
+        <h1>Sommaire:</h1>
+        <button id="b0"onclick="window.location.href='page1.html';">page1</button>
+        <button id="b01"onclick="window.location.href='page2.html';">page2</button>
+        <button id="b02"onclick="window.location.href='page3.html';">page3</button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <form id="formulaire" method="post" action="">
+            <span id="phychiinfo"></span>
+            <h3>Connexion au Musée numerique non officielle d'Epic Games</h3>
+            <span class="fix">prénom.nom</span><input size="25" id="input_saisie_prenom_nom" type="text" name="prenom_nom" value="">
+            <br>
+            <span class="fix">mot de passe</span><input size="25" type="password" name="Passe" value="" autocomplete="off">
+            <input type="hidden" name="etat_connexion" value="demande_soumise">
+            <br>
+            <input type="submit" name="valider_et_rafraichir" value="se connecter et rafraîchir la page">
+            <input type="submit" name="valider" value="se connecter">
+            <input type="submit" onclick="abandon(event)" value="abandon">
+            </form>
+            <script>
+                if (!!document.getElementById('input_saisie_prenom_nom'))
+                    input_saisie_prenom_nom.focus();
+                
+                function abandon(event) {
+                    event.preventDefault();
+                    parent.formulaire_connexion.innerHTML = '';
+                }
+                
+                try {document.domain = 'page1.html';} catch(e) {}
+                try {document.domain = 'phage2.html';} catch(e) {}
+                try {document.domain = 'phage3.html';} catch(e) {}
+    
+            </script>
+    </body>
+</html> 
