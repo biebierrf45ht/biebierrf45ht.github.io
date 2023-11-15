@@ -23,26 +23,31 @@
         <br/>
         <br/>
         <br/>
-        <form>
-            saisie d'un texte : <input type="text"  />
-            <br/>
-            *<input type="text" required />(saisie obligatoire)
-            <br/>
-            mot de passe : <input type="password"  />
-            <br/>
-            <input type="reset" value="effacer" />    
-            <input type="submit" value="envoyer" />
-            <br/>
-            <input type="button" value="bouton" />ce bouton est généraliste
-            <br/>
-            <input type="radio" name="couleur" />rouge   
-            <input type="radio" name="couleur"  checked />vert    
-            <input type="radio" name="couleur"  />bleu
-            <br/>
-            <input type="checkbox" />rouge    
-            <input type="checkbox" checked />vert    
-            <input type="checkbox" />bleu 
-        </form>
+        <form id="formulaire" method="post" action="">
+            <span id="phychiinfo"></span>
+            <h3>Connexion au Musée numerique non officielle d'Epic Games</h3>
+            <span class="fix">prénom.nom</span><input size="25" id="input_saisie_prenom_nom" type="text" name="prenom_nom" value="">
+            <br>
+            <span class="fix">mot de passe</span><input size="25" type="password" name="Passe" value="" autocomplete="off">
+            <input type="hidden" name="etat_connexion" value="demande_soumise">
+            <br>
+            <input type="submit" name="valider_et_rafraichir" value="se connecter et rafraîchir la page">
+            <input type="submit" name="valider" value="se connecter">
+            <input type="submit" onclick="abandon(event)" value="abandon">
+            </form>
+            <script>
+                if (!!document.getElementById('input_saisie_prenom_nom'))
+                    input_saisie_prenom_nom.focus();
+                
+                function abandon(event) {
+                    event.preventDefault();
+                    parent.formulaire_connexion.innerHTML = '';
+                }
+                
+                try {document.domain = 'page1.html';} catch(e) {}
+                try {document.domain = 'phage2.html';} catch(e) {}
+                try {document.domain = 'phage3.html';} catch(e) {}
+    
+            </script>
     </body>
 </html> 
-
